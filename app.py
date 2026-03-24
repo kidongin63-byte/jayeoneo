@@ -81,8 +81,7 @@ if not df.empty:
                 st.subheader("☁️ 키워드 워드클라우드")
                 
                 # 한글 폰트 설정 (OS 환경에 따라 폰트 경로 자동 분기)
-                font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
-                '''
+                font_path = ''
                 system_name = platform.system()
                 if system_name == 'Windows':
                     font_path = 'c:/Windows/Fonts/malgun.ttf'
@@ -90,7 +89,6 @@ if not df.empty:
                     font_path = '/Library/Fonts/AppleGothic.ttf'
                 else: # Linux 환경 (예: 클라우드 서버)
                     font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
-                '''
 
                 try:
                     # 워드클라우드 객체 생성
