@@ -113,7 +113,7 @@ if not df.empty:
 from wordcloud import WordCloud
 
 # 폰트 파일 경로 설정 (현재 실행 파일과 같은 위치에 있을 경우)
-#font_path = "NanumGothic.ttf" 
+font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
 
 # 만약 폰트 파일이 실제 존재하는지 확인하고 싶다면 아래 코드를 추가해보세요.
 if not os.path.exists(font_path):
