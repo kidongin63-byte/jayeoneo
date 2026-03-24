@@ -107,3 +107,19 @@ if not df.empty:
                     st.pyplot(fig)
                 except ValueError:
                     st.error(f"지정된 경로({font_path})에서 한글 폰트를 찾을 수 없어 워드클라우드를 생성할 수 없습니다. 시스템에 맞는 폰트 경로를 코드로 수정해 주세요.")
+                    import os
+from wordcloud import WordCloud
+
+# 폰트 파일 경로 설정 (현재 실행 파일과 같은 위치에 있을 경우)
+font_path = "NanumGothic.ttf" 
+
+# 만약 폰트 파일이 실제 존재하는지 확인하고 싶다면 아래 코드를 추가해보세요.
+if not os.path.exists(font_path):
+    print(f"경고: {font_path} 파일을 찾을 수 없습니다.")
+
+wc = WordCloud(
+    font_path=font_path,  # 이 부분이 핵심입니다.
+    width=800,
+    height=400,
+    background_color='white'
+).generate_from_frequencies(word_counts)
